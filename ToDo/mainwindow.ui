@@ -14,11 +14,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color:rgb(8, 32, 50);
-text-color:rgb(255, 255, 255);
-QLabel {
-color: rgb(255, 255, 255);
-}</string>
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
