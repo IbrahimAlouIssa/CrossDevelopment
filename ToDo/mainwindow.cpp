@@ -4,6 +4,7 @@
 #include <QTextStream>
 #include <QDebug>
 #include <QColorDialog>
+
 void Write(QColor color){
     QFile mFile("://save/savefile.txt.txt");
 
