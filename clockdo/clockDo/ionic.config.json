@@ -1,0 +1,7 @@
+{
+  "name": "clockDo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

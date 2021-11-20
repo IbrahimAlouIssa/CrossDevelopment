@@ -1,0 +1,16 @@
+.label{
+    margin:2em;
+    border-radius: 2em;
+}
+
+.del{
+    color: red;
+    float:right;
+    cursor: pointer;
+}
+
+.goals{
+    background-color: var(--ion-toolbar-background, var(--ion-background-color, #fff));
+    margin: 2em;
+    border-radius: 2em;
+}

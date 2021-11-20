@@ -1,0 +1,14 @@
+<ion-label>Timer</ion-label>
+<div>
+  <svg width="250" height="250" (click)="start()">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00bc9b" />
+      <stop offset="100%" stop-color="#5eaefd" />
+    </linearGradient>
+  </defs>
+  <circle r="100" cx="125" cy="125" class="track"></circle>
+  <circle r="100" cx="125" cy="125" [attr.stroke-dashoffset]="timer" stroke="url(#gradient)"  class="progress"></circle>
+</svg>
+</div>
+

@@ -1,0 +1,16 @@
+
+.track {
+    stroke-width: 1;
+    stroke: lightgrey;
+    fill: none;
+}
+
+.progress {
+    stroke-width: 10;
+    stroke-linecap: round;
+    fill: none;
+    transform: rotate(270deg);
+    transform-origin: center;
+    stroke-dasharray: 630;
+    transition: all .1s ease-in-out;
+}
