@@ -9,6 +9,8 @@
   </defs>
   <circle r="100" cx="125" cy="125" class="track"></circle>
   <circle r="100" cx="125" cy="125" [attr.stroke-dashoffset]="timer" stroke="url(#gradient)"  class="progress"></circle>
-</svg>
+  <text *ngIf="startTimer" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" class="timer">{{min}}:{{sec}}</text>    
+  <text *ngIf="!startTimer" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" class="timer">Press to Start/Pause</text>    
+  </svg>
 </div>
 

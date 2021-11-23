@@ -1,7 +1,7 @@
 <ion-card class="card">
   <ion-card-header >
     <ion-item class="shadow">
-      <ion-label>Working on Ionic App</ion-label>
+      <ion-label class="title">{{title}} <span class="del" (click)="delete()">X</span></ion-label>
     </ion-item>
   </ion-card-header>
 
@@ -9,26 +9,14 @@
     <ion-grid>
       <ion-row>
         <ion-col class="shadow gap">
-          <ion-label>Goals</ion-label>
-          <ion-item >
-            <ion-label>start project</ion-label>
-            <ion-checkbox slot="start"></ion-checkbox>
-          </ion-item>
-          <ion-item >
-            <ion-label>app components</ion-label>
-            <ion-checkbox slot="start"></ion-checkbox>
-          </ion-item>
-          <ion-item >
-            <ion-label>start design</ion-label>
-            <ion-checkbox slot="start"></ion-checkbox>
-          </ion-item>
-          <ion-item >
-            <ion-label>add tailwind</ion-label>
+          <ion-label class="label">Goals</ion-label>
+          <ion-item class="goal" *ngFor="let goal of goals;">
+            <ion-label>{{goal}}</ion-label>
             <ion-checkbox slot="start"></ion-checkbox>
           </ion-item>
         </ion-col>
         <ion-col class="shadow gap">
-          <app-timer></app-timer>
+          <app-timer [time]="time"></app-timer>
         </ion-col>
       </ion-row>
     </ion-grid>

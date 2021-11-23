@@ -5,12 +5,17 @@
 
 .del{
     color: red;
-    float:right;
+    float: right;
     cursor: pointer;
+    margin: 1em;
 }
 
 .goals{
     background-color: var(--ion-toolbar-background, var(--ion-background-color, #fff));
     margin: 2em;
     border-radius: 2em;
+}
+
+.time{
+    float: right;
 }

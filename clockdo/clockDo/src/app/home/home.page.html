@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
       ClockDo
     </ion-title>
@@ -13,8 +13,8 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-      <app-card></app-card>
+  <div id="container" *ngFor="let todo of todos; let i = index;">
+      <app-card [todo]="todo" [index]="i"></app-card>
   </div>
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">

@@ -1,29 +1,34 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>addtodo</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-item class="label">
-    <ion-label position="floating">ToDo</ion-label>
-    <ion-input></ion-input>
+    <ion-label position="floating" >ToDo</ion-label>
+    <ion-input [(ngModel)]="title"></ion-input>
   </ion-item>
   <ion-label class="label">Goals</ion-label>
   <ion-button (click)="addInput()" color="tertiary">add</ion-button>
-  <div class="goals" *ngFor="let value of values; let i = index">
-    <ion-input>
-    </ion-input>
-    <ion-icon class="del" (click)="removeInput()" name="close-circle-outline" ></ion-icon>
+  <div *ngFor="let value of values; let i = index">
+    <ion-icon class="del" (click)="removeInput()" name="close-circle-outline"></ion-icon>
+    <ion-item class="label">
+      <ion-label position="floating">Goal</ion-label>
+      <ion-input [(ngModel)]="values[i].goal">      
+      </ion-input>
+    </ion-item>
   </div>
   <ion-item class="label">
     <ion-label class="label">Timer</ion-label>
-    <ion-datetime display-format="HH:mm" placeholder="Tap here" [(ngModel)]="timer"></ion-datetime>  
+    <div class="time">mm:ss</div>
+    <ion-datetime displayFormat="mm:ss" placeholder="Tap here" [(ngModel)]="timer"></ion-datetime>
   </ion-item>
   
   <div class="label">
-    <ion-button expand="block">Add Task</ion-button>
+    <ion-button expand="block" (click)="add()">Add Task</ion-button>
   </div>
   
  
 </ion-content>
+ 

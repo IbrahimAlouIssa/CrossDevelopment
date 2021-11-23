@@ -1,12 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Todo } from 'src/models/todo.model';
+import { DataService } from '../data.service';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
 
-  constructor() {}
+  
+  todos: Todo[];
+  constructor(private data: DataService) {
+    // this.loadData();
+  }
 
+  ngOnInit(){
+    this.data.currentTodo.subscribe(todo => this.todos = todo);
+  }
+
+  // async loadData(){
+  //   this.todos = this.data.todos;
+  // }
 }
+
